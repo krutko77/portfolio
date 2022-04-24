@@ -11,6 +11,13 @@
       min-height: 70px;
    }
 
+   .social__list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 180px;
+   }
+
    .menu__list {
       display: flex;
       align-items: center;
