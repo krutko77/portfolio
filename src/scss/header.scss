@@ -1,18 +1,47 @@
 .header {
+   position:absolute;
+   background-color: #C3E0FF;
+   width: 100%;
+   z-index: 10;
 
-   &__menu {
+   &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;   
+      min-height: 70px;
+   }
+
+   .menu__list {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      width: 500px;
+
+      @media (max-width: $mobile) {
+         flex-direction: column;      
+      }
    }
 
    .menu__link {
       text-transform: uppercase;
-      @include font(12px, 400, 120%, $textColor)
+      @include font(12px, 400, 120%, $textColor);
+      cursor: pointer;
    }
 }
 
+._header-scroll {
+   position: fixed;
+   top: -200px;       
+}     
 
+._header-scroll .header__container {
+   min-height: 50px;   
+} 
+
+._header-show {
+   transition: top 0.7s 0s;
+   top: 0;
+}
 
 
 //Burger
