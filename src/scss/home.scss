@@ -1,5 +1,20 @@
 //home.css
 .home {
-   height: 500px;
-   background-color:antiquewhite;
+   min-height: 100vh;
+   // background-color:darkgray;
+   display: flex;
+   padding: 70px 0 15px;
+
+   &__container {
+      display:flex;
+      flex: 1 1 auto;
+   }
+
+   &__wrapper {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      border-bottom: 4px solid $mainColor;
+   }
 }
+
