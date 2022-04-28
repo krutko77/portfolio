@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Портфолио"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-            <section class="home">
-               <div class="home__container">
-                  <div class="home__wrapper">
-                     <div class="home__content"></div>
-                     <div class="home__img-wrapper"></div>
+@@include('html/_head.htm',{
+"title":"Портфолио"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+         <section class="home">
+            <div class="home__container">
+               <div class="home__wrapper">
+                  <div class="home__content">
+                     <div class="home__img-box">
+                        <div class="home__img-wrapper">
+                           <img class="home__img" src="@img/photo.jpg" alt="photo">
+                        </div>
+                     </div>
+                     <div class="home__text-box">
+                        <div class="home__text-wrapper">
+                           <h1 class="home__title title">веб разработчик</h1>
+                           <p class="home__text-description">Создаю сайты с использованием технологий HTML, CSS/SCSS, JavaScript</p>
+                           <p class="home__text-name">Павел Крутько, Минск, Беларусь</p>
+                        </div>                        
+                     </div>
                   </div>
                </div>
-            </section>
-            <section class="projects">
-               <div class="projects__container">
+            </div>
+         </section>
+         <section class="projects">
+            <div class="projects__container">
 
-               </div>
-            </section>
-            <section class="skills">
-               <div class="skills__container">
+            </div>
+         </section>
+         <section class="skills">
+            <div class="skills__container">
 
-               </div>
-            </section>
-            <section class="about">
-               <div class="about__container">
+            </div>
+         </section>
+         <section class="about">
+            <div class="about__container">
 
-               </div>
-            </section>
-            <section class="contact">
-               <div class="contact__container">
+            </div>
+         </section>
+         <section class="contact">
+            <div class="contact__container">
 
-               </div>
-            </section>
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
-	</body>
+            </div>
+         </section>
+      </main>
+      @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_popup.htm',{})
+   @@include('html/_js.htm',{})
+</body>
+
 </html>
- 
