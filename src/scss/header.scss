@@ -71,7 +71,7 @@
       }
 
       &__item:not(:last-child) {
-         @include adaptiveValue("margin-right", 50, 35, 1200, 768, 1);
+         @include adaptiveValue("margin-right", 45, 35, 1200, 768, 1);
 
          @media (max-width: $mobile) {
             margin: 0 0 30px;
@@ -80,7 +80,7 @@
 
       &__link {
          text-transform: uppercase;
-         @include adaptiveValue("font-size", 12, 11, 1200, 768, 1);
+         @include adaptiveValue("font-size", 14, 12, 1200, 768, 1);
          cursor: pointer;    
          
          @media (max-width: $mobile) {
@@ -97,8 +97,7 @@
 }     
 
 ._header-scroll {
-   min-height: 50px;   
-   // box-shadow: -1px 8px 0px -1px rgba(255,204,13,0.43);
+   min-height: 50px;    
 } 
 
 ._header-show {

@@ -8,11 +8,10 @@
 // 		font-style: #{$style};
 // 	}
 // }
-@mixin font($fontSize, $fontWeight, $lineHeight, $color) {
+@mixin font($fontSize, $fontWeight, $lineHeight) {
    font-size: $fontSize;
    font-weight: $fontWeight;
-   line-height: $lineHeight;
-   color: $color;
+   line-height: $lineHeight;   
 }
 //Percent
 @function percent($px, $from) {
