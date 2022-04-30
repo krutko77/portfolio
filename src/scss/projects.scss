@@ -1,5 +1,7 @@
 //projects.css
 .projects {
-   height: 500px;
+   min-height: 100vh;
+   display: flex;
    background-color: #fff;
+   margin-bottom: 20px;
 }

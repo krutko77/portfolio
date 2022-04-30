@@ -3,6 +3,7 @@
    min-height: 100vh;
    display: flex;
    padding: 70px 0 15px;
+   margin-bottom: 20px;
 
    &__container {
       display:flex;
@@ -26,13 +27,14 @@
    &__img-box {
       flex: 0 1 50%;
       display: flex;
-      justify-content: center;
+      justify-content: center;      
    }
 
    &__text-box {
       flex: 0 1 50%;
       display: flex;
       align-items: center;
+      padding-left: 45px;
    }
 
    &__title {
@@ -56,19 +58,37 @@
       margin-bottom: 15px;
    }
 
+   &__img-box {
+      position: relative;
+   }
+
+   &__border-block {
+      position: relative;
+      padding: 20px;
+      border: 10px solid $mainColor;
+      background-color: transparent;
+      z-index: 2;
+   }
+
    &__img-wrapper {
       max-width: 450px;
    }
 
    &__img {
+      position: relative;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      z-index: 10;
    }
 
-   &__color-block {
-      width: 600px;
-      height: 600px;     
+   &__color-block {     
+      position: absolute;
+      top: 80px;
+      bottom: 80px;
+      left: 15px;
+      right: 15px;
+      z-index: 1;     
       background-color: $accentColor;
    }
 }
