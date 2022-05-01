@@ -1,7 +1,8 @@
 //preloader
-.preloader {
+.preloader {   
 
    &__scene   {
+      overflow: hidden;
       display: flex;
       position: fixed;
       top: 0;
@@ -9,15 +10,23 @@
       width: 100%;
       height: 100%;
       z-index: 100;
+      perspective: 1000px;
+      pointer-events: none;     
    }
 
    &__block {
       width: 50%;
       background-color: $mainLightColor;
-   }   
-}
+      animation: leftBlock 1s linear forwards;
+      animation-delay: 1.4s;
 
-.loading {
+         &:last-child {
+         animation: rightBlock 1s linear forwards;
+         animation-delay: 1.4s;
+      }   
+   }
+}
+.loading {   
 
    &__block {
       position: absolute;
@@ -25,6 +34,8 @@
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 101;
+      animation: loading 0.2s linear forwards;
+      animation-delay: 1.2s;      
    }
 
    &__title {
@@ -52,6 +63,16 @@
    }
 }
 
+@keyframes loading {
+   from {
+      opacity: 1;
+   }
+
+   to {
+      opacity: 0;
+   }
+}
+
 @keyframes progressLine {
    from {
       width: 0;
@@ -64,28 +85,38 @@
 
 @keyframes leftBlock {
    0% {
-      transform: translate(0) scale(1) rotate(0);
+      transform: translateX(0%) scale(1) rotateY(0);
    }
 
    50% {
-      transform: translate(0) scale(0.9) rotate(10);
+      transform: translateX(0%) scale(0.9) rotateY(10deg);
    }
 
    100% {
-      transform: translate(-100%) scale(0.9) rotate(10);
+      transform: translateX(-110%) scale(0.9) rotateY(10deg);
    }
 }
 
 @keyframes rightBlock {
    0% {
-      transform: translate(0) scale(1) rotate(0);
+      transform: translateX(0%) scale(1) rotateY(0);
    }
 
    50% {
-      transform: translate(0) scale(0.9) rotate(10);
+      transform: translateX(0%) scale(0.9) rotateY(-10deg);
    }
 
    100% {
-      transform: translate(100%) scale(0.9) rotate(10);
+      transform: translateX(110%) scale(0.9) rotateY(-10deg);
+   }
+}
+
+@keyframes wrapperAnimation {
+   from {
+      transform: scale(0.7) rotateX(-25deg);
+   }
+
+   to {
+      transform: scale(1) rotateX(0);
    }
 }
