@@ -107,16 +107,16 @@
       }
 
       &__link::before {
-         left: 47%;
+         left: calc(50% - 3.5px);      
       }
 
       &__link::after {
-         right: 47%;
+         right: calc(50% - 3.5px);      
       }
 
       &__link:hover::before,
       &__link:hover::after {
-         width: 47%;
+         width: calc(50% - 3.5px);
       }
       
       &__link._navigator-active {

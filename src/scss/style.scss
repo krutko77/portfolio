@@ -77,6 +77,8 @@ body {
 .wrapper {
 	display: flex;
 	flex-direction: column;
+   // align-items: center;
+   // justify-content: center;
 	overflow: hidden;
 	// Прижимаем footer
 	> main {
@@ -142,6 +144,7 @@ body {
 @import "common";
 
 // Подключение стилей отдельных блоков
+@import "preloader";
 @import "header";
 @import "footer";
 
