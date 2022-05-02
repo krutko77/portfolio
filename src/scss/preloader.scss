@@ -18,11 +18,11 @@
       width: 50%;
       background-color: $mainLightColor;
       animation: leftBlock 1s linear forwards;
-      animation-delay: 1.4s;
+      animation-delay: 1.7s;
 
          &:last-child {
          animation: rightBlock 1s linear forwards;
-         animation-delay: 1.4s;
+         animation-delay: 1.7s;
       }   
    }
 }
@@ -35,7 +35,7 @@
       transform: translate(-50%, -50%);
       z-index: 101;
       animation: loading 0.2s linear forwards;
-      animation-delay: 1.2s;      
+      animation-delay: 1.5s;      
    }
 
    &__title {
@@ -57,7 +57,7 @@
          bottom: 2px;
          left: 2px;
          background-color: $accentColor;
-         animation: progressLine 1s ease forwards;
+         animation: progressLine 1.5s ease forwards;
          border-radius: 4px;
       }
    }
@@ -108,15 +108,5 @@
 
    100% {
       transform: translateX(110%) scale(0.9) rotateY(-10deg);
-   }
-}
-
-@keyframes wrapperAnimation {
-   from {
-      transform: scale(0.7) rotateX(-25deg);
-   }
-
-   to {
-      transform: scale(1) rotateX(0);
    }
 }

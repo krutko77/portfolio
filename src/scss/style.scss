@@ -63,8 +63,7 @@ $responsiveType: 1;
 body {
    background: $mainBgColor;
    height: 100%;
-   perspective: 1000px;
-
+  
 	// Скролл заблокирован
 	.lock & {
 		overflow: hidden;
@@ -80,9 +79,7 @@ body {
 	display: flex;
 	flex-direction: column;   
 	overflow: hidden;
-   transform: scale(0.7) rotateX(-25deg);
-   animation: wrapperAnimation 1s linear forwards;
-   animation-delay: 1.5s; 
+
 	// Прижимаем footer
 	> main {
 		flex: 1 1 auto;
@@ -91,6 +88,10 @@ body {
 	> * {
 		min-width: 0;
 	}
+}
+
+.page {
+   perspective: 5000px;
 }
 // Ограничивающий контейнер ===================================================================================
 
