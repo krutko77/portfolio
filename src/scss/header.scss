@@ -75,7 +75,11 @@
       }
 
       &__item:not(:last-child) {
-         @include adaptiveValue("margin-right", 30, 20, 1200, 768, 1);
+         margin-right: 30px;
+
+         @media (max-width: $pc) {
+            margin-right: calc(20px + 10*((100vw - 768px) / (1230 - 768)));
+         }
 
          @media (max-width: $mobile) {
             margin: 0 0 30px;
@@ -85,10 +89,13 @@
       &__link {
          padding: 5px 7px;
          text-transform: uppercase;
-         @include adaptiveValue("font-size", 14, 12, 1200, 768, 1);
          cursor: pointer; 
          display: block;    
          position: relative;  
+
+         @media (max-width: $pc) {
+            font-size: calc(12px + 2*((100vw - 768px) / (1230 - 768)));
+         }
          
          @media (max-width: $mobile) {
             font-size: 22px;

@@ -30,12 +30,21 @@
       display: flex;
       justify-content: center;
       align-items: center;     
-      border-bottom: 4px solid $mainColor;
+      border-bottom: 4px solid $mainColor;  
+      
+      @media (max-width: $tablet) {
+         border-width: 3px;
+      }
    }
 
    &__content {
       display: flex;
       width: 100%;
+
+      @media (max-width: $mobile) {
+         flex-direction: column;
+         align-items: center;
+      }
    }
 
    &__text-box {
@@ -43,40 +52,73 @@
       display: flex;
       align-items: center;
       padding-left: 45px;
+
+      @media (max-width: $mobile) {
+         padding: 0;
+      }
+      
    }
 
    &__title {
-      // @include adaptiveValue("font-size", 72, 50, 1200, 479.98, 1);
-      font-size: 72px;
-      font-weight: 700;
-      line-height: 87%;
+      @include font(72px, 700, 87%);
       letter-spacing: -2px;
       margin-bottom: 65px;
       position: relative;
+
+      @media (max-width: $pc) {
+         font-size: calc(44px + 22*((100vw - 320px) / (1230 - 320)));
+         margin-bottom: calc(40px + 25*((100vw - 320px) / (1230 - 320)));
+      }
+
+      @media (max-width: $mobile) {
+         max-width: 400px;
+      }
+      
 
       &::after {
          content: "";
          position: absolute;
          bottom: -25px;
-         left: 5px;
+         left: 0;
          width: 210px;
          height: 10px;
          background-color: $mainColor;
+
+         @media (max-width: $tablet) {
+            height: 7px;
+         }
       }
    }
 
    &__text-description {
       margin-bottom: 15px;
+      
+      @media (max-width: $mobile) {
+         max-width: 420px;
+      }
    }
 
    &__img-box {
       flex: 0 1 50%;
       display: flex;
-      justify-content: center;      
+      justify-content: center;  
+      
+      @media (max-width: $mobile) {
+         margin-bottom: 60px;
+      }
+
+      @media (max-width: $mobileSmall) {
+         margin-bottom: 45px;
+      }
    }
 
    &__img-inner {
       position: relative;
+      margin-left: 26px;
+
+      @media (max-width: $mobile) {
+         margin: 0;
+      }
    }
 
    &__border-block {
@@ -85,10 +127,18 @@
       border: 10px solid $mainColor;
       background-color: transparent;
       z-index: 2;
+
+      @media (max-width: $tablet) {
+         border-width: 7px;
+      }
    }
 
    &__img-wrapper {
       max-width: 450px;
+
+      @media (max-width: $mobile) {
+         max-width: 350px;
+      }
    }
 
    &__img {
