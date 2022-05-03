@@ -1,7 +1,21 @@
 //projects.css
 .projects {
-   min-height: 100vh;
-   display: flex;
-   background-color: #fff;
+   padding: 70px 0 50px;
    margin-bottom: 20px;
+
+   &__inner {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+   }
+
+   &__title {
+      margin-bottom: 65px;
+      position: relative;
+      align-self: center;
+
+      &::after {
+         left: 18%;         
+      }
+   }
 }
