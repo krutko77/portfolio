@@ -1,9 +1,9 @@
 //projects.css
 .projects {
-   padding: 70px 0 50px;
+   padding: 150px 0 50px;
    margin-bottom: 20px;
 
-   &__inner {
+   &__wrapper {
       display: flex;
       flex-direction: column;
       text-align: center;
@@ -15,7 +15,61 @@
       align-self: center;
 
       &::after {
-         left: 18%;         
+         left: 19%;         
       }
    }
+
+   .block {      
+
+      &__content {
+         // display: grid;
+         // grid-template-columns: 1fr 1fr;
+         // gap: 50px;
+         display: flex;
+
+      }
+
+      &__img-box {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding: 30px 0 0;
+      }
+
+      &__subtitle {
+         font-family: "SpectralSC", serif;
+         @include font(28px, 800, 120%);
+         letter-spacing: 0;
+         text-align: center;
+         text-transform: uppercase;
+         margin-bottom: 30px;
+      
+         @media (max-width: $pc) {
+            font-size: calc(22px + 6*((100vw - 320px) / (1260 - 320)));
+         }
+      }
+
+      &__description {
+         text-align: left;
+         margin-bottom: 30px;
+         @include font(18px, 400, 140%);
+
+         @media (max-width: $pc) {
+            font-size: calc(14px + 4*((100vw - 320px) / (1260 - 320)));
+         }
+      }
+
+      &__link {
+         max-width: 550px;
+         max-height: 400px;
+         overflow: hidden;
+      }
+
+      &__img {
+         width: 120%;
+         
+      }
+
+   }
+
 }
