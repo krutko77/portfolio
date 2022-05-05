@@ -38,7 +38,7 @@
          display: flex;
          flex-direction: column;
          align-items: center;
-         padding: 30px 0 0;
+         padding: 30px 20px 0;
          background-color: $mainLightColor;
          // box-shadow: 0 0 10px rgb(0 0 0 / 50%);
       }
@@ -57,10 +57,51 @@
          }
       }
 
+      &__img-wrapper {
+         width: 100%;
+         position: relative;
+         overflow: hidden;
+         margin-bottom: 30px;
+      }
+
+      &__img-link {
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         z-index: 10;
+         
+         &:hover + .block__img {
+            transform: scale(1);
+         }
+      }      
+
+      &__img {
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         height: 400px;
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position: 50%;
+         transition: all 1s ease; 
+         transform: scale(1.2);         
+      }   
+      
+      &__img--1{
+         background-image: url("@img/cover.png");
+      }
+
+      &__img--2 {
+         background-image: url("@img/helicopter_flight.jpeg");
+      }
+
       &__description {
          text-align: center;
          margin-bottom: 30px;
-         padding: 0 30px 0;
+         padding: 0 10px 0;
          @include font(18px, 400, 140%);
 
          @media (max-width: $pc) {
@@ -68,16 +109,34 @@
          }
       }
 
-      &__link {
-         max-width: 550px;
-         height: 400px;
-         overflow: hidden;
+      &__link {  
+         position: relative;      
          margin-bottom: 30px;
-      }
+         font-weight: 500;
 
-      &__img {
-         width: 120%;
-         
+         &::before,
+         &::after {
+            content: '';    
+            position: absolute; 
+            top: 100%;    
+            width: 0;    
+            height: 2px;    
+            background: $accentColor;    
+            transition: 0.3s;
+         }
+
+         &::before {
+            left: 50%;      
+         }
+
+         &::after {
+            right: 50%;      
+         }
+
+         &:hover::before,
+         &:hover::after {
+            width: 50%;
+         }      
       }
 
    }
