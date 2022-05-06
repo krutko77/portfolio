@@ -37,8 +37,7 @@
          flex-direction: column;
          align-items: center;
          padding: 30px 20px 0;
-         background-color: $mainLightColor;
-         // box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+         background-color: $mainLightColor;         
       }
 
       &__subtitle {
@@ -48,7 +47,7 @@
          text-align: center;
          text-transform: uppercase;
          margin-bottom: 20px;
-         max-width: 340px;         
+         max-width: 330px;         
       
          @media (max-width: $pc) {
             font-size: calc(22px + 6*((100vw - 320px) / (1260 - 320)));
