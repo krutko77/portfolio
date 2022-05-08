@@ -8,9 +8,16 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-[class*="_icon-"] {
+[class*="icon-"], [class*="icon-"] {
 	&:before {
 		@extend %ic;
 		display: block;
 	}
 }
+
+ .icon-chevron-down:before {
+   content: "\e900";
+ }
+ .icon-chevron-up:before {
+   content: "\e901";
+ }
