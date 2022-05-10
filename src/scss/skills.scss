@@ -1,6 +1,40 @@
 //skills.css
 .skills {
-   min-height: 100vh;
-   display: flex;
+   padding: 120px 0 20px;
    margin-bottom: 20px;
+   
+   @media (max-width: $tablet) {
+      padding: 90px 0 20px;
+   }
+
+   @media (max-width: $mobileSmall) {
+      padding: 50px 0 20px;
+   }
+
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      border-bottom: 4px solid $mainColor; 
+      
+      @media (max-width: $tablet) {
+         border-width: 3px;
+      }
+   }
+
+   &__title {
+      margin-bottom: 130px;
+      position: relative;
+      align-self: center;
+
+      @media (max-width: $tablet) {
+         margin-bottom: 80px;
+      }
+
+      &::after {
+         left: 17%;         
+      }
+   }
+
+
 }
