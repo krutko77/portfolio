@@ -497,11 +497,11 @@ export function showMore() {
 			let hiddenHeight = 0;
 			const showMoreType = showMoreBlock.dataset.showmore ? showMoreBlock.dataset.showmore : 'size';
 			if (showMoreType === 'items') {
-				const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 3;
+				const showMoreTypeValue = 2;
 				const showMoreItems = showMoreContent.children;
 				for (let index = 1; index < showMoreItems.length; index++) {
 					const showMoreItem = showMoreItems[index - 1];
-					hiddenHeight += showMoreItem.offsetHeight;
+					hiddenHeight += showMoreItem.offsetHeight + 25;
 					if (index == showMoreTypeValue) break
 				}
 			} else {
@@ -531,11 +531,20 @@ export function showMore() {
 					const showMoreButton = targetEvent.closest('[data-showmore-button]');
 					const showMoreBlock = showMoreButton.closest('[data-showmore]');
 					const showMoreContent = showMoreBlock.querySelector('[data-showmore-content]');
-					const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton : '500';
+					const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton : 1000;
 					const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
+               const iconMore = document.querySelector(".portfolio__button-icon");
 					if (!showMoreContent.classList.contains('_slide')) {
 						showMoreBlock.classList.contains('_showmore-active') ? _slideUp(showMoreContent, showMoreSpeed, hiddenHeight) : _slideDown(showMoreContent, showMoreSpeed, hiddenHeight);
 						showMoreBlock.classList.toggle('_showmore-active');
+                  if(showMoreBlock.classList.contains('_showmore-active')) {
+                     iconMore.classList.remove('_icon-chevron-down');
+                     iconMore.classList.add('_icon-chevron-up');
+                   } 
+                   else {
+                     iconMore.classList.remove('_icon-chevron-up');
+                     iconMore.classList.add('_icon-chevron-down');
+                   }     
 					}
 				}
 			} else if (targetType === 'resize') {
@@ -545,6 +554,8 @@ export function showMore() {
 		}
 	});
 }
+
+
 //================================================================================================================================================================================================================================================================================================================
 // Прочие полезные функции ================================================================================================================================================================================================================================================================================================================
 //================================================================================================================================================================================================================================================================================================================
