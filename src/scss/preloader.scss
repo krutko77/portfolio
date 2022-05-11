@@ -1,6 +1,5 @@
 //preloader
-.preloader {   
-
+.preloader { 
    &__scene   {
       overflow: hidden;
       display: flex;
@@ -27,7 +26,6 @@
    }
 }
 .loading {   
-
    &__block {
       position: absolute;
       top: 50%;
