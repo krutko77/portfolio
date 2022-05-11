@@ -12,7 +12,9 @@
    }
 
    &__wrapper {
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       border-bottom: 4px solid $mainColor; 
       
       @media (max-width: $tablet) {
@@ -21,12 +23,11 @@
    }
 
    &__title {
-      margin-bottom: 130px;
-      position: relative;
-      align-self: center;
+      margin-bottom: 90px;
+      position: relative;      
 
       @media (max-width: $tablet) {
-         margin-bottom: 80px;
+         margin-bottom: 70px;
       }
 
       &::after {
@@ -34,10 +35,13 @@
       }
    }
 
-   .portfolio {         
+   .portfolio {      
+      width: 100%;   
+      text-align: center;
+
       &__content {
          display: flex;
-         flex-direction: column;
+         flex-direction: column;         
          row-gap: 50px;
 
          @media (max-width: $pc) {

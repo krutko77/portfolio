@@ -23,12 +23,12 @@
    }
 
    &__title {
-      margin-bottom: 130px;
+      margin-bottom: 90px;
       position: relative;
       align-self: center;
 
       @media (max-width: $tablet) {
-         margin-bottom: 80px;
+         margin-bottom: 70px;
       }
 
       &::after {
@@ -39,23 +39,29 @@
    &__progress-bar {
       max-width: 800px;
       width: 100%;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
 
       .progress {
          &__item {
-            width: 100;
+            width: 100%;
             margin-bottom: 20px;
             border: 4px solid $mainColor;
             padding: 10px;
+            // font-family: "SpectralSC", serif;
+            @include font(22px, 700, 98%);
+            // letter-spacing: -2px;
+         }
+
+         &__subtitle {
+            display: inline-block;
          }
       }
    }
 
    &__text {
-      max-width: 800px;
+      max-width: 790px;
       width: 100%;
-      padding: 15px;
-      margin-bottom: 50px;
+      margin-bottom: 90px;
       text-align: center;
    }
 
