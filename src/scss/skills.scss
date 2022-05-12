@@ -46,15 +46,46 @@
             width: 100%;
             margin-bottom: 20px;
             border: 4px solid $mainColor;
-            padding: 10px;
-            // font-family: "SpectralSC", serif;
-            @include font(22px, 700, 98%);
-            // letter-spacing: -2px;
+            padding: 7px;
+            @include font(22px, 500, 150%);
+            @media (max-width: $pc) {
+               font-size: calc(16px + 6*((100vw - 320px) / (1260 - 320)));
+            }
+            
+         }
+
+         &__item-inner {
+            width: 100%;
+            position: relative;
+            
+            &::before {
+               content: "";
+               position: absolute;
+               top: 0;
+               bottom: 0;
+               left: 0;
+               background-color: $accentColor;
+               z-index: 1;
+               animation: progressLine 3s cubic-bezier(.165,.84,.44,1) forwards;
+            }          
+            
          }
 
          &__subtitle {
+            position: relative;
             display: inline-block;
+            z-index: 2;
+            padding: 0 15px;
          }
+
+         &__percent {
+            position: absolute;
+            top: 0;
+            right: 8%;
+            z-index: 2;
+         }
+
+         
       }
    }
 
@@ -66,4 +97,14 @@
    }
 
 
+}
+
+@keyframes progressLine {
+   from {
+      width: 0;
+   }
+
+   to {
+      width: 70%;
+   }
 }
