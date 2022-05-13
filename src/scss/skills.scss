@@ -45,30 +45,22 @@
          &__item {
             width: 100%;
             margin-bottom: 20px;
-            border: 4px solid $mainColor;
+            border: 3px solid $mainColor;
             padding: 7px;
-            @include font(22px, 500, 150%);
+            @include font(22px, 500, 170%);
             @media (max-width: $pc) {
-               font-size: calc(16px + 6*((100vw - 320px) / (1260 - 320)));
+               font-size: calc(14px + 8*((100vw - 320px) / (1260 - 320)));
             }
-            
+
+            @media (max-width: $mobile) {
+               border: 2px solid $mainColor;
+               margin-bottom: 15px;
+            }            
          }
 
          &__item-inner {
             width: 100%;
-            position: relative;
-            
-            &::before {
-               content: "";
-               position: absolute;
-               top: 0;
-               bottom: 0;
-               left: 0;
-               background-color: $accentColor;
-               z-index: 1;
-               animation: progressLine 3s cubic-bezier(.165,.84,.44,1) forwards;
-            }          
-            
+            position: relative;          
          }
 
          &__subtitle {
@@ -78,14 +70,57 @@
             padding: 0 15px;
          }
 
+         &__bg {
+            position: absolute;  
+            top: 0;
+            bottom: 0;
+            left: 0;                      
+         }
+
+         &__bg._watcher-view {
+            &::after {
+               content: "";
+               position: absolute;
+               top: 0;
+               bottom: 0;
+               left: 0;
+               background-color: $accentColor;
+               z-index: 1;
+               animation: progressLine 3s cubic-bezier(.165,.84,.44,1) forwards;
+               animation-delay: 0.8s;
+            }    
+         }
+
+         &__bg-1 {
+            width: 70%;
+         }
+
+         &__bg-2 {
+            width: 60%;
+         }
+
+         &__bg-3 {
+            width: 70%;
+         }
+
+         &__bg-4 {
+            width: 35%;
+         }
+
+         &__bg-5 {
+            width: 30%;
+         }
+
+         &__bg-6 {
+            width: 25%;
+         }
+
          &__percent {
             position: absolute;
             top: 0;
-            right: 8%;
-            z-index: 2;
-         }
-
-         
+            right: -50px;
+            z-index: 2;           
+         }         
       }
    }
 
@@ -95,8 +130,6 @@
       margin-bottom: 90px;
       text-align: center;
    }
-
-
 }
 
 @keyframes progressLine {
@@ -105,6 +138,6 @@
    }
 
    to {
-      width: 70%;
+      width: 100%;
    }
 }
