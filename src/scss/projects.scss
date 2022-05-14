@@ -30,6 +30,10 @@
          margin-bottom: 70px;
       }
 
+      @media (max-width: $mobileSmall) {
+         margin-bottom: 50px;
+      }
+
       &::after {
          left: 19%;         
       }
