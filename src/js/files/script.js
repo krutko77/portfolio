@@ -12,3 +12,4 @@ const observer = new IntersectionObserver(entries => {
   });
 });
 observer.observe(document.querySelector('.skills__content'));
+

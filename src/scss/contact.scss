@@ -1,7 +1,46 @@
 //contact
 .contact {
-   min-height: 100vh;
+   // min-height: 100vh;
    display: flex;
-   background-color:chartreuse;
+   // background-color:chartreuse;
    margin-bottom: 20px;
+   justify-content: center;
+
+}
+
+
+.about__inner {
+   // max-width: 600px;
+   // width: 100%;
+   // display: flex;
+   // justify-content: center;  
+}
+
+.swiper {
+ height: 300px;
+ max-width: 600px;
+
+   // &__slide {
+   //    max-width: 900px;
+   // }
+
+   &__slide {
+      display: flex;
+      justify-content: center;
+   }
+
+   &__slider-image {
+     max-width: 500px;   
+     text-align: center;  
+   }
+
+   &__image {
+      max-width: 100%;
+   }
+
+  
+
+   // &__slider-image img {
+   //    max-width: 100%;
+   // }
 }
