@@ -36,7 +36,7 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
-			spaceBetween: 0,
+			spaceBetween: 60,
 			autoHeight: true,
 			speed: 800,
          effect: 'fade',

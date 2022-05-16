@@ -41,8 +41,10 @@
    }
 
    &__content {
-      width: 1000px;
+      max-width: 1000px;
+      width: 100%;
       margin-bottom: 90px;
+      overflow: hidden;
             
       @media (max-width: $pc) {
          width: calc(290px + 710*((100vw - 320px) / (1260 - 320)));
@@ -56,44 +58,92 @@
    &__description { 
       padding: 30px 40px 50px;     
       text-align: center;  
-      background-color: $mainLightColor;        
+      background-color: $mainLightColor; 
+      
+      @media (max-width: $mobileSmall) {
+         padding: 20px 10px 30px; 
+      }
    }
 
    &__hobby {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 30px 0 50px ;
       background-color: $accentColor;
-      min-width: 0;
+      overflow: hidden;
    }
 
    &__hobby-text {
-      max-width: 600px;
+      padding: 30px 10px 0;
+      max-width: 740px;
       width: 100%;
       text-align: center; 
+      
+      @media (max-width: $mobileSmall) {
+         padding: 20px 10px 0;
+      } 
    }
 
-   // &__inner {
-   //    max-width: 900px;
-   // }
-
-   &__slider {
-      // padding: 30px 0 70px 0;
-   }
+   &__swiper {
+      background-color: #FFCC0D;        
+   }   
 }
 
-// .swiper {
-//    // &__slide {
-//    //    max-width: 900px;
-//    // }
+.swiper {   
+   width: 100%;
+   padding: 30px 50px 70px;
+   
+   @media (max-width: $mobileSmall) {
+      padding: 15px 35px 40px;
+   }   
+  
+   &__slide {
+      text-align: center;
+     }
 
-//    &__slider-image {
-//       text-align: center;
+   &__slider-image {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;      
+   }
+  
+   &__image {
+        max-width: 100%;
+     }
+
+   &__caption {
+      background-color: $mainLightColor;
+      width: 100%;
+      @include font(22px, 700, 200%);
+
+      @media (max-width: $pc) {
+         font-size: calc(16px + 6*((100vw - 320px) / (1260 - 320)));
+      }
+   }
+     
+   .swiper-button-prev,
+   .swiper-rtl .swiper-button-next {
+      left: 10px; 
       
-//    }
-
-//    &__slider-image img {
-//       max-width: 100%;
-//    }
-// }
+      @media (max-width: $mobileSmall) {
+      left: 5px; 
+      }
+   }
+     
+   .swiper-button-next,
+   .swiper-rtl .swiper-button-prev {
+      right: 10px;
+      
+      @media (max-width: $mobileSmall) {
+      right: 5px; 
+      }
+   }
+  
+   .swiper-button-next:after,
+   .swiper-button-prev:after {        
+      font-size: 44px;
+      @media (max-width: $pc) {
+         font-size: calc(22px + 22*((100vw - 320px) / (1260 - 320)));
+      }   
+   }
+}
