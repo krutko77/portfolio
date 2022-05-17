@@ -58,12 +58,12 @@
    &__description { 
       padding: 30px 40px 50px;     
       text-align: center;  
-      background-color: $mainLightColor; 
+      background-color: $mainLightColor;           
       
       @media (max-width: $mobileSmall) {
          padding: 20px 10px 30px; 
       }
-   }
+   }   
 
    &__hobby {
       display: flex;
@@ -71,6 +71,14 @@
       align-items: center;
       background-color: $accentColor;
       overflow: hidden;
+      transition: all 1s ease 0s;
+      opacity: 0;
+      transform: perspective(600px) translate(0px, 30%) rotateX(45deg);     
+   }
+
+   &__hobby._about-transition {
+      opacity: 1;
+      transform: perspective(600px) translate(0px, 0px) rotateX(0deg);  
    }
 
    &__hobby-text {

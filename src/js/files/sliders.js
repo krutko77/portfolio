@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Pagination, EffectCube } from 'swiper';
+import Swiper, { Navigation, Pagination, EffectFlip } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -32,15 +32,14 @@ function initSliders() {
 		new Swiper('.swiper', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Pagination, EffectCube],
+			modules: [Navigation, Pagination, EffectFlip],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
 			spaceBetween: 0,
 			autoHeight: true,
 			speed: 800,
-         // effect: 'fade',
-
+         
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
@@ -49,13 +48,19 @@ function initSliders() {
 
 			
 			// Эффекты
-			effect: 'cube',
-			cubeEffect: {
+         effect: 'flip',
+         flipEffect: {
             slideShadows: true,
-            shadow: true,
-            shadowOffset: 20,
-            shadowScale: 0.94
+            limitRotation: true
          },
+
+			// effect: 'cube',
+			// cubeEffect: {
+         //    slideShadows: true,
+         //    shadow: true,
+         //    shadowOffset: 20,
+         //    shadowScale: 0.94
+         // },
 
 			// Пагинация
 			
