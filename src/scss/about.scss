@@ -89,6 +89,8 @@
    }   
 }
 
+//cлайдер
+
 .swiper {   
    width: 100%;
    padding: 30px 50px 70px;
@@ -146,4 +148,25 @@
          font-size: calc(22px + 22*((100vw - 320px) / (1260 - 320)));
       }   
    }
+
+   .swiper-pagination {
+      transform: translate3d(0, 0, 0);
+      
+   }
+
+   .swiper-horizontal > .swiper-pagination-bullets,
+   .swiper-pagination-bullets.swiper-pagination-horizontal,
+   .swiper-pagination-custom,
+   .swiper-pagination-fraction {
+      bottom: 3.5%;
+      left: 0;
+      width: 100%;
+      font-size: 20px;
+      line-height: 150%;
+
+      @media (max-width: $pc) {
+         font-size: calc(16px + 6*((100vw - 320px) / (1260 - 320)));
+      }
+   } 
+
 }

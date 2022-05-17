@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, EffectCube } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -32,14 +32,14 @@ function initSliders() {
 		new Swiper('.swiper', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Pagination],
+			modules: [Navigation, Pagination, EffectCube],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
-			spaceBetween: 60,
+			spaceBetween: 0,
 			autoHeight: true,
 			speed: 800,
-         effect: 'fade',
+         // effect: 'fade',
 
 			//touchRatio: 0,
 			//simulateTouch: false,
@@ -47,31 +47,26 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 
-			/*
+			
 			// Эффекты
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
+			effect: 'cube',
+			cubeEffect: {
+            slideShadows: true,
+            shadow: true,
+            shadowOffset: 20,
+            shadowScale: 0.94
+         },
 
 			// Пагинация
 			
 			pagination: {
 				el: '.swiper-pagination',
-				clickable: true,
+				type: 'fraction',
+            renderFraction: function(currentClass, totalClass) {
+               return 'Фото <span class="'+ currentClass +'"></span>' + ' из ' + '<span class="' + totalClass +'"></span>';
+            }
 			},
 			
-
-			// Скроллбар
-			/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
-
 			// Кнопки "влево/вправо"
 			navigation: {
 				prevEl: '.swiper-button-prev',
