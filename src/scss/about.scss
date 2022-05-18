@@ -41,17 +41,16 @@
    }
 
    &__content {
-      max-width: 1000px;
-      width: 100%;
-      margin-bottom: 90px;
-      overflow: hidden;
+      max-width: 1000px;      
+      margin-bottom: 90px;      
             
       @media (max-width: $pc) {
-         width: calc(290px + 710*((100vw - 320px) / (1260 - 320)));
+         max-width: calc(290px + 710*((100vw - 320px) / (1260 - 320)));
       }
 
       @media (max-width: $mobileSmall) {
          margin-bottom: 50px;
+         width: 100%;
       }
    }
 
@@ -70,7 +69,6 @@
       flex-direction: column;
       align-items: center;
       background-color: $accentColor;
-      overflow: hidden;
       transition: all 1s ease 0s;
       opacity: 0;
       transform: perspective(600px) translate(0px, 30%) rotateX(45deg);     
@@ -92,7 +90,7 @@
       } 
    }
 
-   &__swiper {
+  &__swiper {
       background-color: #FFCC0D;        
    }   
 }
@@ -100,8 +98,12 @@
 //cлайдер
 
 .swiper {   
-   width: 100%;
-   padding: 30px 50px 70px;
+   width: 800px;
+   padding: 30px 50px 60px;
+
+   @media (max-width: $pc) {
+      width: calc(290px + 510*((100vw - 320px) / (1260 - 320)));
+   }
    
    @media (max-width: $mobileSmall) {
       padding: 15px 35px 40px;
@@ -129,6 +131,12 @@
       @media (max-width: $pc) {
          font-size: calc(16px + 6*((100vw - 320px) / (1260 - 320)));
       }
+   }
+
+   .swiper-button-next,
+   .swiper-button-prev {
+      top: 50%;
+      transform: translateY(-30%);
    }
      
    .swiper-button-prev,

@@ -1,74 +1,52 @@
-//contact
-.contact {
-   // min-height: 100vh;
-   display: flex;
-   // background-color:chartreuse;
+//about.css
+.сщтефсе {
+   padding: 120px 0 20px;
    margin-bottom: 20px;
-   justify-content: center;
-
-   &__container {
-      overflow: hidden;
+   
+   @media (max-width: $tablet) {
+      padding: 90px 0 20px;
    }
 
-   // &__swiper {
-   //    background-color: #FFCC0D;
-     
-   // }
+   @media (max-width: $mobileSmall) {
+      padding: 50px 0 20px;
+   }
 
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 4px solid $mainColor; 
+      
+      @media (max-width: $tablet) {
+         border-width: 3px;
+      }
+   }
+
+   &__title {
+      margin-bottom: 90px;
+      position: relative;
+      align-self: center;
+
+      @media (max-width: $tablet) {
+         margin-bottom: 70px;
+      }
+
+      @media (max-width: $mobileSmall) {
+         margin-bottom: 50px;
+      }
+
+      &::after {
+         left: 5%;         
+      }
+   }
+
+   &__content {
+      display: flex;      
+   }
+
+   .content {
+      &__left-block, &__right-block {
+         flex: 0 1 50%;
+      }
+   }
 }
-
-
-.contact__inner {
-   // max-width: 600px;
-   // width: 100%;
-   // display: flex;
-   // justify-content: center; 
-   overflow: hidden;  
-}
-
-// .swiper {
-//    width: 1000px;
-//    padding: 30px 50px 70px;
-//    @media (max-width: $pc) {
-//       width: calc(290px + 710*((100vw - 320px) / (1260 - 320)));
-//    }
-
-//    @media (max-width: $mobileSmall) {
-//       padding: 20px 35px 40px;
-//    }
-   
-  
-//    &__slide {
-//       text-align: center;
-//      }
-  
-//    &__image {
-//         max-width: 100%;
-//      }
-     
-//      .swiper-button-prev,
-//      .swiper-rtl .swiper-button-next {
-//         left: 10px; 
-        
-//         @media (max-width: $mobileSmall) {
-//          left: 5px; 
-//          }
-//      }
-     
-//      .swiper-button-next,
-//      .swiper-rtl .swiper-button-prev {
-//         right: 10px;
-        
-//          @media (max-width: $mobileSmall) {
-//          right: 5px; 
-//          }
-//       }
-  
-//    .swiper-button-next:after,
-//    .swiper-button-prev:after {        
-//       font-size: 44px;
-//       @media (max-width: $pc) {
-//          font-size: calc(22px + 22*((100vw - 320px) / (1260 - 320)));
-//       }   
-//    }
-// }
