@@ -14,16 +14,16 @@ const observerA = new IntersectionObserver(entries => {
 observerA.observe(document.querySelector('.skills__content'));
 
 //about transition
-const aboutHobby = document.querySelector('.about__hobby');
-aboutHobby.classList.remove('_about-transition');
+const aboutSwiper = document.querySelector('.about__swiper');
+aboutSwiper.classList.remove('_about-transition');
 
 const observerB = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      aboutHobby.classList.add('_about-transition');
+      aboutSwiper.classList.add('_about-transition');
       return;
     }
-    aboutHobby.classList.remove('_about-transition');
+    aboutSwiper.classList.remove('_about-transition');
   });
 });
-observerB.observe(document.querySelector('.about__hobby'));
+observerB.observe(document.querySelector('.about__swiper'));

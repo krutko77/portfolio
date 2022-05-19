@@ -68,15 +68,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-color: $accentColor;
-      transition: all 1s ease 0s;
-      opacity: 0;
-      transform: perspective(600px) translate(0px, 30%) rotateX(45deg);     
-   }
-
-   &__hobby._about-transition {
-      opacity: 1;
-      transform: perspective(600px) translate(0px, 0px) rotateX(0deg);  
+      background-color: $accentColor;       
    }
 
    &__hobby-text {
@@ -91,12 +83,24 @@
    }
 
   &__swiper {
-      background-color: #FFCC0D;        
+      transition: all 1s ease 0s;
+      opacity: 0;
+      transform: perspective(600px) translate(0px, -100%) rotateX(45deg);         
+   }
+
+   @media (prefers-reduced-motion: no-preference) {
+      .about__swiper {
+        transition: opacity 2s ease, transform 2s ease;        
+      }
+    }
+
+   &__swiper._about-transition {
+      opacity: 1;
+      transform: perspective(600px) translate(0px, 0px) rotateX(0deg);       
    }   
 }
 
 //cлайдер
-
 .swiper {   
    width: 800px;
    padding: 30px 50px 60px;

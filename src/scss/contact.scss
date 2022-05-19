@@ -87,5 +87,13 @@
          width: calc(50%);              
          
       }
+
+      &__tel {
+         transition: 0.3s ease;
+
+         &:hover {
+            color: $accentColor;
+         }
+      }
    }
 }
