@@ -4,11 +4,11 @@
    margin-bottom: 20px;
    
    @media (max-width: $tablet) {
-      padding: 90px 0 20px;
+      padding: 100px 0 20px;
    }
 
    @media (max-width: $mobileSmall) {
-      padding: 50px 0 20px;
+      padding: 90px 0 20px;
    }
 
    &__wrapper {
