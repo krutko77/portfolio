@@ -8,7 +8,7 @@
    }
 
    @media (max-width: $mobileSmall) {
-      padding: 90px 0 20px;
+      padding: 75px 0 0;
    }
 
    &__wrapper {
@@ -32,7 +32,7 @@
       }
 
       @media (max-width: $mobileSmall) {
-         margin-bottom: 50px;
+         margin-bottom: 35px;
       }
 
       &::after {
@@ -41,26 +41,21 @@
    }
 
    &__content {
-      max-width: 1000px;      
       margin-bottom: 90px;      
             
-      @media (max-width: $pc) {
-         max-width: calc(290px + 710*((100vw - 320px) / (1260 - 320)));
-      }
-
       @media (max-width: $mobileSmall) {
          margin-bottom: 50px;
-         width: 100%;
+         // width: 100%;
       }
    }
 
    &__description { 
-      padding: 30px 40px 50px;     
+      padding: 25px 20px 25px; 
       text-align: center;  
       background-color: $mainLightColor;           
       
       @media (max-width: $mobileSmall) {
-         padding: 20px 10px 30px; 
+         padding: 20px 10px 20px; 
       }
    }   
 
@@ -72,7 +67,7 @@
    }
 
    &__hobby-text {
-      padding: 30px 10px 0;
+      padding: 25px 10px 0;
       max-width: 740px;
       width: 100%;
       text-align: center; 
@@ -83,27 +78,30 @@
    }
 
   &__swiper {
-      transition: all 1s ease 0s;
       opacity: 0;
-      transform: perspective(600px) translate(0px, -100%) rotateX(45deg);         
+      transform: perspective(600px) translate(-100%, 0px) rotateY(-45deg); 
+      
+      @media (max-width: $mobileSmall) {
+         transform: perspective(600px) translate(-60%, 0px) rotateY(-45deg); 
+      } 
    }
 
    @media (prefers-reduced-motion: no-preference) {
       .about__swiper {
-        transition: opacity 2s ease, transform 2s ease;        
+       transition: opacity 2.5s ease, transform 2.5s ease;        
       }
     }
 
-   &__swiper._about-transition {
+   &__swiper._watcher-view {
       opacity: 1;
-      transform: perspective(600px) translate(0px, 0px) rotateX(0deg);       
+      transform: perspective(600px) translate(0px, 0px) rotateY(0deg);       
    }   
 }
 
 //cлайдер
 .swiper {   
    width: 800px;
-   padding: 30px 50px 60px;
+   padding: 25px 50px 60px;
 
    @media (max-width: $pc) {
       width: calc(290px + 510*((100vw - 320px) / (1260 - 320)));
