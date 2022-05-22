@@ -45,16 +45,20 @@
    }
 
    &__left-block, &__right-block {
-      flex: 0 1 100%;
+      flex: 0 1 50%;
    }
 
    &__left-block {
-      // text-align: center;
-      padding: 50px 0 70px;        
-      font-size: 26px;
+      text-align: justify;
+      padding: 50px 0 70px;    
 
       p {
          margin-bottom: 30px;
+      }
+
+      &__right-block {
+         display: flex;
+         justify-content: center;
       }
    }
 
@@ -97,5 +101,28 @@
 
    &__form {
       width: 500px;
+   }
+
+   .form {
+      &__placeholder-container {
+         position: relative;
+         width: 100%;
+         margin-bottom: 20px;
+      }
+
+      &__placeholder-container {
+         position: relative;
+         width: 100%;
+         margin-bottom: 20px;
+      }
+
+      &__placeholder-container input, textarea {
+         background-color: transparent;
+         border: 2px solid $mainColor;
+         height: 50px;
+         outline: 0;
+         padding: 0 20px;
+         width: 100%;
+     }
    }
 }
