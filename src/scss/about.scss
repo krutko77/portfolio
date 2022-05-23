@@ -79,7 +79,7 @@
 
   &__swiper {
       opacity: 0;
-      transform: perspective(600px) translate(-100%, 0px) rotateY(-45deg); 
+      transform: perspective(600px) translate(-80%, 0px) rotateY(-45deg); 
       
       @media (max-width: $mobileSmall) {
          transform: perspective(600px) translate(-60%, 0px) rotateY(-45deg); 
