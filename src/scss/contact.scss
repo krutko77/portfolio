@@ -53,16 +53,25 @@
 
    &__left-block {
       text-align: justify;
-      padding: 0 20px;    
-
-      p {
-         margin-bottom: 20px;
-      }      
+      padding: 0 20px;            
    }
 
-   &__right-block {
-      display: flex;
-      justify-content: center;
+   &__text {
+      margin-bottom: 20px;
+   }
+
+   &__info {
+     display: block;
+     margin-bottom: 20px;
+
+     &::after {
+      content: '';    
+      position: absolute; 
+      top: 0;
+      left: 10px;    
+      width: 32px;    
+      height: 32px;    
+     }
    }
 
    &__link-mail {
@@ -100,6 +109,11 @@
       &:hover {
          color: $accentColor;
       }
+   }
+
+   &__right-block {
+      display: flex;
+      justify-content: center;
    }
 
    &__form {
