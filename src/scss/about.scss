@@ -44,8 +44,7 @@
       margin-bottom: 90px;      
             
       @media (max-width: $mobileSmall) {
-         margin-bottom: 50px;
-         // width: 100%;
+         margin-bottom: 50px;         
       }
    }
 
@@ -79,10 +78,10 @@
 
   &__swiper {
       opacity: 0;
-      transform: perspective(600px) translate(-80%, 0px) rotateY(-45deg); 
+      transform: perspective(600px) translate(-60%, 0px) rotateY(-45deg);   
       
       @media (max-width: $mobileSmall) {
-         transform: perspective(600px) translate(-60%, 0px) rotateY(-45deg); 
+         transform: perspective(600px) translate(-40%, 0px) rotateY(-45deg); 
       } 
    }
 
@@ -103,7 +102,7 @@
    width: 800px;
    padding: 25px 50px 60px;
 
-   @media (width: $pc) {
+   @media (max-width: $pc) {
       width: calc(290px + 510*((100vw - 320px) / (1260 - 320)));
    }
    
