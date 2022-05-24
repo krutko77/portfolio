@@ -103,7 +103,7 @@
    width: 800px;
    padding: 25px 50px 60px;
 
-   @media (max-width: $pc) {
+   @media (width: $pc) {
       width: calc(290px + 510*((100vw - 320px) / (1260 - 320)));
    }
    

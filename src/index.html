@@ -22,7 +22,7 @@
    <div class="wrapper">
       @@include('html/_header.htm',{})
       <main class="page">
-         <section class="home" data-watch="navigator">
+         <section class="home" data-watch="navigator" data-watch-threshold="0.4">
             <div class="home__container">
                <div class="home__wrapper">
                   <div class="home__content">
@@ -320,18 +320,18 @@
                      </div>
                      <div class="contact__right-block">
                         <div class="contact__form form" data-watch data-watch-once>
-                           <form class="form" action="https://formspree.io/f/meqnnozq" method="POST">
+                           <form class="form" id="form" action="https://formspree.io/f/meqnnozq" method="POST">
                               <div class="form__contact-block">
                                  <div class="form__placeholder-container">
-                                     <input class="form__input text" type="text" name="name" id="name" placeholder=" " />
-                                     <label class="form__label text" for="name">Имя*</label>
+                                     <input class="form__input text" id="name" type="text"  name="name" data-validate data-error="Напишите имя" data-required placeholder=" " />
+                                     <label class="form__label text" for="name">Имя *</label>
                                  </div>
                                  <div class="form__placeholder-container">
-                                     <input class="form__input text" type="email" name="email" id="email" placeholder=" " />
-                                     <label class="form__label text" for="email">E-mail*</label>
+                                     <input class="form__input text" id="email" type="email" name="email"  data-required placeholder=" " data-validate data-error="Напишите правильный E-mail" data-required="email" />
+                                     <label class="form__label text" for="email">E-mail *</label>
                                  </div>
                                  <div class="form__placeholder-container">
-                                     <textarea class="form__input text" type="text" name="message" id="message" placeholder=" " ></textarea>
+                                     <textarea class="form__input text" type="text" name="message" id="message" data-validate data-error="Напишите текст сообщения"  data-required placeholder=" " ></textarea>
                                      <label class="form__label text" for="message">Сообщение</label>
                                  </div>      
                              </div>

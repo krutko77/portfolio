@@ -3,7 +3,7 @@
    min-height: calc(100vh - 70px);
    display: flex;
    padding: 120px 0 20px;
-   margin-bottom: 20px;
+   margin-bottom: 40px;
    
    @media (max-width: $tablet) {
       padding: 100px 0 20px;
@@ -132,8 +132,13 @@
 
    &__form {
       width: 500px;
+      margin-bottom: 90px;
       opacity: 0;
-      transform: perspective(600px)  rotateX(-90deg);        
+      transform: perspective(600px)  rotateX(-90deg);   
+      
+      @media (width: $pc) {
+         width: calc(290px + 210*((100vw - 320px) / (1260 - 320)));
+      }
    }
 
    @media (prefers-reduced-motion: no-preference) {
@@ -169,6 +174,10 @@
          padding: 0 20px;
          width: 100%;
          transition: all 0.3s;
+     }
+
+     &__input._form-error {
+        border: 2px solid $errorColor;
      }
 
      &__label {
