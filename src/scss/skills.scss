@@ -69,6 +69,16 @@
       transform: scale(1);
    }
 
+   &__text {
+      padding: 0 10px;
+      text-align: center;
+      margin-bottom: 20px;
+
+      @media (max-width: $mobileSmall) {
+         margin-bottom: 15px;
+      }
+   }
+
    &__progress-bar {
       margin-bottom: 20px;      
 
@@ -136,18 +146,30 @@
          }
 
          &__bg-3 {
-            width: 70%;
-         }
-
-         &__bg-4 {
             width: 35%;
          }
 
+         &__bg-4 {
+            width: 50%;
+         }
+
          &__bg-5 {
-            width: 30%;
+            width: 40%;
          }
 
          &__bg-6 {
+            width: 20%;
+         }
+
+         &__bg-7 {
+            width: 30%;
+         }
+
+         &__bg-8 {
+            width: 40%;
+         }
+
+         &__bg-9 {
             width: 25%;
          }
 
