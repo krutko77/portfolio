@@ -117,28 +117,6 @@
          border: 1px solid #ACACAC;
       }
 
-      &__flip-right {
-         opacity: 0;
-         transform: perspective(1500px)  rotateY(90deg);   
-      }
-
-      &__flip-left {
-         opacity: 0;
-         transform: perspective(1500px)  rotateY(-90deg); 
-      }
-
-      @media (prefers-reduced-motion: no-preference) {
-         .portfolio__flip-right, 
-         .portfolio__flip-left {
-            transition: opacity 1s ease, transform 3s cubic-bezier(.165,.84,.44,1);        
-         }
-      } 
-      
-      &__img-wrapper._watcher-view {
-         opacity: 1;
-         transform: perspective(1500px) rotateY(0deg); 
-      }
-
       &__img-link {
          position: absolute;
          top: 0;

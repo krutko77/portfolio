@@ -75,26 +75,6 @@
          padding: 20px 10px 0;
       } 
    }
-
-  &__swiper {
-      opacity: 0;
-      transform: perspective(600px) translate(-60%, 0px) rotateY(-45deg);   
-      
-      @media (max-width: $mobileSmall) {
-         transform: perspective(600px) translate(-40%, 0px) rotateY(-45deg); 
-      } 
-   }
-
-   @media (prefers-reduced-motion: no-preference) {
-      .about__swiper {
-       transition: opacity 2.5s ease, transform 2.5s ease;        
-      }
-    }
-
-   &__swiper._watcher-view {
-      opacity: 1;
-      transform: perspective(600px) translate(0px, 0px) rotateY(0deg);       
-   }   
 }
 
 //cлайдер

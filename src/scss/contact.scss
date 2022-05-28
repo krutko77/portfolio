@@ -2,16 +2,23 @@
 .contact {
    min-height: calc(100vh - 70px);
    display: flex;
-   padding: 120px 0 20px;
    margin-bottom: 40px;   
    
-   @media (max-width: $tablet) {
-      padding: 100px 0 20px;
+   @media (max-width: $mobileSmall) {
+      margin-bottom: 10px; 
    }
 
-   @media (max-width: $mobileSmall) {
-      padding: 90px 0 20px;
-      margin-bottom: 10px; 
+   &__container {
+      padding-top: 120px;
+      padding-bottom: 20px;
+
+      @media (max-width: $tablet) {
+         padding-top: 100px;        
+      }
+   
+      @media (max-width: $mobileSmall) {
+         padding-top: 90px;        
+      }
    }
 
    &__wrapper {
@@ -164,9 +171,7 @@
 
    &__form {
       width: 500px;
-      margin-bottom: 90px;
-      opacity: 0;
-      transform: perspective(600px)  rotateX(-90deg);   
+      margin-bottom: 90px;         
       
       @media (max-width: $pc) {
          width: calc(290px + 210*((100vw - 320px) / (1260 - 320)));
@@ -179,18 +184,7 @@
       @media (max-width: $mobileSmall) {
          margin-bottom: 50px;            
       }
-   }
-
-   @media (prefers-reduced-motion: no-preference) {
-      .contact__form {
-       transition: opacity 1.5s ease, transform 1.5s ease;        
-      }
-    }
-
-   &__form._watcher-view {
-      opacity: 1;
-      transform: perspective(600px) rotateX(0deg);       
-   }     
+   }   
 
    .form {
       &__placeholder-container {
@@ -236,8 +230,7 @@
             top: calc(9px + 6 * (100vw - 320px) / 940);
             left: calc(7px + 3 * (100vw - 320px) / 940);
          }         
-      }
-     
+      }     
 
       textarea.form__input {
         height: 200px;
@@ -255,7 +248,7 @@
 
       .form__input:focus + label, 
       .form__input:not(:placeholder-shown) + label {
-         top: -17px;
+         top: -15px;
          left: 10px;
          font-size: 18px; 
          background-color: $mainBgColor;
@@ -295,6 +288,23 @@
          &:active {
             transform: translate(1px, 2px);
          }
-      }      
+      }
+      
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus
+      input:-webkit-autofill,
+      textarea:-webkit-autofill,
+      textarea:-webkit-autofill:hover
+      textarea:-webkit-autofill:focus,
+      select:-webkit-autofill,
+      select:-webkit-autofill:hover,
+      select:-webkit-autofill:focus {
+         
+         -webkit-text-fill-color: #1f1f20;
+         -webkit-box-shadow: 0 0 0 1000px transparent inset;
+         transition: background-color 5000s ease-in-out 0s;
+         background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,174,255,0.04) 50%,rgba(255,255,255,0) 51%,rgba(0,174,255,0.03) 100%);
+      }
    }
 }

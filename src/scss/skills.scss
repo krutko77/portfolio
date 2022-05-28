@@ -85,12 +85,12 @@
       .progress {
          &__item {
             width: 100%;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             border: 3px solid $mainColor;
             padding: 7px;
-            @include font(22px, 500, 170%);
+            @include font(20px, 500, 170%);
             @media (max-width: $pc) {
-               font-size: calc(14px + 8*((100vw - 320px) / (1260 - 320)));
+               font-size: calc(14px + 6*((100vw - 320px) / (1260 - 320)));
             }
 
             @media (max-width: $mobile) {
@@ -177,12 +177,18 @@
             position: absolute;
             top: 0;
             right: -50px;
-            z-index: 2;    
-            
+            z-index: 2; 
+            transform: scale(0); 
+                        
             @media (max-width: $pc) {
                right: calc(-35px - 15*((100vw - 320px) / (1260 - 320)));
             }
-         }         
+         }
+         
+         &__percent._watcher-view {
+            animation: percent 1.5s cubic-bezier(.165,.84,.44,1) forwards;
+            animation-delay: 2.6s;  
+         }
       }
    }
 
@@ -205,5 +211,15 @@
 
    to {
       width: 100%;
+   }
+}
+
+@keyframes percent {
+   from {
+      transform: scale(0);
+   }
+
+   to {
+      transform: scale(1);
    }
 }

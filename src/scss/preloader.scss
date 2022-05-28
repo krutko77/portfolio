@@ -13,18 +13,24 @@
       pointer-events: none;     
    }
 
-   &__block {
-      width: 50%;
-      background-color: $mainLightColor;
-      animation: leftBlock 1s linear forwards;
-      animation-delay: 1.7s;
+   &__block-left, 
+   &__block-right {
+      width: 110%;
+      height: 100%;
+      background-color: $mainLightColor;           
+   }
 
-         &:last-child {
-         animation: rightBlock 1s linear forwards;
-         animation-delay: 1.7s;
-      }   
+   &__block-left {
+      animation: leftBlock 1s linear forwards; 
+      animation-delay: 1.7s;     
+   }
+   
+   &__block-right {
+      animation: rightBlock 1s linear forwards; 
+      animation-delay: 1.7s;        
    }
 }
+
 .loading {   
    &__block {
       position: absolute;
@@ -78,8 +84,9 @@
 
 @keyframes leftBlock {
    0% {
-      transform: translateX(0%) scale(1) rotateY(0);
+      transform: translateX(10%) scale(1) rotateY(0deg);
    }
+   
 
    50% {
       transform: translateX(0%) scale(0.9) rotateY(10deg);
@@ -92,7 +99,7 @@
 
 @keyframes rightBlock {
    0% {
-      transform: translateX(0%) scale(1) rotateY(0);
+      transform: translateX(-10%) scale(1) rotateY(0deg);
    }
 
    50% {
