@@ -56,14 +56,14 @@
                <div class="projects__wrapper">
                   <h2 class="projects__title title">Проекты</h2>
                   <div class="projects__portfolio portfolio block" data-showmore="items">
-                     <ul class="portfolio__content block__content" data-showmore-content="1">
+                     <ul class="portfolio__content block__content" data-showmore-content>
 
                         <li class="portfolio__item">
                            <div class="portfolio__block">
                               <div class="portfolio__img-box">
                                  <h3 class="portfolio__subtitle">Интернет магазин "DRIVE MOTO"</h3>
                                  <div class="portfolio__img-wrapper" data-aos="flip-right"
-                                    data-aos-easing="ease-out-cubic" data-aos-duration="2000">>
+                                 data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                                     <a class="portfolio__img-link" target="portfolio"
                                        href="https://krutko77.github.io/project-11-shops"></a>
                                     <div class="portfolio__img portfolio__img--1"></div>
@@ -76,8 +76,8 @@
                               </div>
                               <div class="portfolio__img-box">
                                  <h3 class="portfolio__subtitle">Лендинг "Полёт на вертолёте"</h3>
-                                 <div class="portfolio__img-wrapper" data-aos="flip-left"
-                                    data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                                 <div class="portfolio__img-wrapper" data-aos="flip-right"
+                                 data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                                     <a class="portfolio__img-link" target="portfolio"
                                        href="https://krutko77.github.io/Project_7_Photosession"></a>
                                     <div class="portfolio__img portfolio__img--2"></div>
@@ -92,7 +92,6 @@
                               </div>
                            </div>
                         </li>
-
                         <li class="portfolio__item">
                            <div class="portfolio__block">
                               <div class="portfolio__img-box">
@@ -112,7 +111,7 @@
                               </div>
                               <div class="portfolio__img-box">
                                  <h3 class="portfolio__subtitle">Лендинг "Archmove"</h3>
-                                 <div class="portfolio__img-wrapper" data-aos="flip-left"
+                                 <div class="portfolio__img-wrapper" data-aos="flip-right"
                                     data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                                     <a class="portfolio__img-link" target="portfolio"
                                        href="https://krutko77.github.io/Project-14_Archmove_WP"></a>
@@ -166,7 +165,7 @@
 
                      </ul>
                      <button hidden data-showmore-button class="portfolio__button-more" type="button">
-                        <span class="portfolio__button-label"><span class="">Показать еще</span>
+                        <span class="portfolio__button-label"><span>Показать еще</span>
                            <i class="portfolio__button-icon _icon-chevron-down"></i></span>
                         <span class="portfolio__button-label"><span>Скрыть</span>
                            <i class="portfolio__button-icon _icon-chevron-up"></i></span>
@@ -332,7 +331,7 @@
          </section>
          <section class="contact" data-watch="navigator" data-watch-threshold="0.5">
             <div class="contact__container" data-aos="flip-down" data-aos-easing="ease-out-cubic"
-            data-aos-duration="1500">
+               data-aos-duration="1500">
                <div class="contact__wrapper">
                   <h2 class="contact__title title">Контакты</h2>
                   <div class="contact__content text">
@@ -349,17 +348,17 @@
                      </div>
                      <div class="contact__right-block">
                         <div class="contact__form form">
-                           <form class="form" id="form" name="myForm" action="https://formspree.io/f/meqnnozq" method="POST" >
+                           <form class="form" id="form" name="myForm" action="files/sendmail/sendmail.php" method="POST" data-ajax>
                               <div class="form__contact-block">
                                  <div class="form__placeholder-container">
-                                    <input class="form__input text for-clear" id="name" type="text" name="name" data-validate
-                                       data-error="Напишите имя" data-required placeholder=" " />
+                                    <input class="form__input text for-clear" id="name" type="text" name="name"
+                                       data-validate data-error="Напишите имя" data-required placeholder=" " />
                                     <label class="form__label text" for="name">Имя *</label>
                                  </div>
                                  <div class="form__placeholder-container">
-                                    <input class="form__input text for-clear" id="email" type="email" name="email" data-required
-                                       placeholder=" " data-validate data-error="Напишите правильный E-mail"
-                                       data-required="email" />
+                                    <input class="form__input text for-clear" id="email" type="email" name="email"
+                                       data-required placeholder=" " data-validate
+                                       data-error="Напишите правильный E-mail" data-required="email" />
                                     <label class="form__label text" for="email">E-mail *</label>
                                  </div>
                                  <div class="form__placeholder-container">

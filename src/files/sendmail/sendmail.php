@@ -22,18 +22,18 @@
 	*/
 
 	//От кого письмо
-	$mail->setFrom('from@gmail.com', 'Фрилансер по жизни'); // Указать нужный E-mail
+	$mail->setFrom('from@gmail.com', 'Форма сайта-портфолио'); // Указать нужный E-mail
 	//Кому отправить
-	$mail->addAddress('to@gmail.com'); // Указать нужный E-mail
+	$mail->addAddress('krutko77@mail.ru'); // Указать нужный E-mail
 	//Тема письма
-	$mail->Subject = 'Привет! Это "Фрилансер по жизни"';
+	$mail->Subject = 'Привет! Это запрос с сайта-портфолио';
 
 	//Тело письма
 	$body = '<h1>Встречайте супер письмо!</h1>';
 
-	//if(trim(!empty($_POST['email']))){
-		//$body.=$_POST['email'];
-	//}	
+	// if(trim(!empty($_POST['email']))){
+	// 	$body.=$_POST['email'];
+	// }	
 	
 	/*
 	//Прикрепить файл

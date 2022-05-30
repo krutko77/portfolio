@@ -12,15 +12,15 @@
 
 
 
-let button = document.querySelector('.clear-button'); 
+// let button = document.querySelector('.clear-button'); 
 
-button.addEventListener("click", submitForm);
+// button.addEventListener("click", submitForm);
 
-	function submitForm() {
-      document.getElementById('name').value='';
-      document.getElementById('email').value='';
-      document.getElementById('message').value='';
-   }
+// 	function submitForm() {
+//       document.getElementById('name').value='';
+//       document.getElementById('email').value='';
+//       document.getElementById('message').value='';
+//    }
 		
 	
 // function fun() {

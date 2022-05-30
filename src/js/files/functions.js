@@ -129,7 +129,7 @@ export let _slideToggle = (target, duration = 500) => {
 		return _slideUp(target, duration);
 	}
 }
-// Вспомогательные модули блокировки прокрутки и скочка ====================================================================================================================================================================================================================================================================================
+// Вспомогательные модули блокировки прокрутки и скачка ====================================================================================================================================================================================================================================================================================
 export let bodyLockStatus = true;
 export let bodyLockToggle = (delay = 500) => {
 	if (document.documentElement.classList.contains('lock')) {
@@ -531,7 +531,7 @@ export function showMore() {
 					const showMoreButton = targetEvent.closest('[data-showmore-button]');
 					const showMoreBlock = showMoreButton.closest('[data-showmore]');
 					const showMoreContent = showMoreBlock.querySelector('[data-showmore-content]');
-					const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton : 1000;
+					const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton :500;
 					const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
                const iconMore = document.querySelector(".portfolio__button-icon");
 					if (!showMoreContent.classList.contains('_slide')) {
@@ -554,7 +554,6 @@ export function showMore() {
 		}
 	});
 }
-
 
 //================================================================================================================================================================================================================================================================================================================
 // Прочие полезные функции ================================================================================================================================================================================================================================================================================================================

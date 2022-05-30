@@ -214,9 +214,18 @@
      }
 
      &__input._form-error {
-        border: 2px solid $errorColor;
+        border: 2px solid $errorColor;      
      }
 
+     &__error {
+        font-size: 18px;
+        color: $errorColor;
+
+        @media (max-width: $pc) {
+         font-size: calc(12px + 6*((100vw - 320px) / (1260 - 320)));
+         }
+      } 
+     
      &__label {
          background-color: $mainBgColor;
          padding: 5px 10px;
@@ -248,7 +257,7 @@
 
       .form__input:focus + label, 
       .form__input:not(:placeholder-shown) + label {
-         top: -15px;
+         top: -13px;
          left: 10px;
          font-size: 18px; 
          background-color: $mainBgColor;
