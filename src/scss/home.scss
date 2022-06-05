@@ -10,7 +10,7 @@
    animation-delay: 2.1s;  
 
    @media (max-width: $tablet) {
-      padding: 50px 0 15px;
+      padding: 60px 0 15px;
    }
 
    @keyframes homeAnimation {
@@ -132,7 +132,7 @@
       max-width: 450px;
 
       @media (max-width: $mobile) {
-         max-width: 350px;
+         max-width: 270px;
       }
    }
 

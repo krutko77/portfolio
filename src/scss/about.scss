@@ -75,6 +75,17 @@
          padding: 20px 10px 0;
       } 
    }
+
+   &__swiper {
+      opacity: 0;
+      transform: scale(0.3);
+      transition: opacity 2.0s ease, transform 1.8s ease;
+   }
+
+   &__swiper._watcher-view {
+      opacity: 1;
+      transform: scale(1);
+   }
 }
 
 //cлайдер

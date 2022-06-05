@@ -289,14 +289,18 @@
          }
 
          &:hover {
-           color: $accentColor;
-           background-color: transparent;
-           border: 2px solid $accentColor;
+            @media (min-width: 1025px) {
+               color: $accentColor;
+               background-color: transparent;
+               border: 2px solid $accentColor;
+            }           
          }
 
          &:active {
             transform: translate(1px, 2px);
          }
+
+         
       }
       
       input:-webkit-autofill,
