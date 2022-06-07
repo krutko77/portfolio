@@ -22,7 +22,7 @@
 	$mail->Port       = 465;    
 
 	//От кого письмо
-	$mail->setFrom('postmaster@webkrutko.by', 'Cайт-портфолио'); // Указать нужный E-mail
+	$mail->setFrom('webkrutko@yandex.by', 'Cайт-портфолио'); // Указать нужный E-mail
 	//Кому отправить
 	$mail->addAddress('krutko77@mail.ru'); // Указать нужный E-mail
 	//Тема письма
