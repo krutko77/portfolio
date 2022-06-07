@@ -11,18 +11,18 @@
 	$mail->setLanguage('ru', 'phpmailer/language/');
 	$mail->IsHTML(true);
 
-	/*
+	
+	// Настройки вашей почты
 	$mail->isSMTP();                                            //Send using SMTP
-	$mail->Host       = 'smtp.example.com';                     //Set the SMTP server to send through
+	$mail->Host       = 'ssl://smtp.yandex.ru';                     //Set the SMTP server to send through
 	$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-	$mail->Username   = 'user@example.com';                     //SMTP username
-	$mail->Password   = 'secret';                               //SMTP password
+	$mail->Username   = 'webkrutko@yandex.by';                     //SMTP username
+	$mail->Password   = 'Certina77';                               //SMTP password
 	$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-	$mail->Port       = 465;                 
-	*/
+	$mail->Port       = 465;    
 
 	//От кого письмо
-	$mail->setFrom('from@gmail.com', 'Форма сайта-портфолио'); // Указать нужный E-mail
+	$mail->setFrom('postmaster@webkrutko.by', 'Cайт-портфолио'); // Указать нужный E-mail
 	//Кому отправить
 	$mail->addAddress('krutko77@mail.ru'); // Указать нужный E-mail
 	//Тема письма
@@ -31,9 +31,9 @@
 	//Тело письма
 	$body = '<h1>Встречайте супер письмо!</h1>';
 
-	// if(trim(!empty($_POST['email']))){
-	// 	$body.=$_POST['email'];
-	// }	
+	if(trim(!empty($_POST['email']))){
+		$body.=$_POST['email'];
+	}	
 	
 	/*
 	//Прикрепить файл
