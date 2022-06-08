@@ -31,8 +31,16 @@
 	//Тело письма
 	$body = '<h1>Встречайте супер письмо!</h1>';
 
-	if(trim(!empty($_POST['email']))){
-		$body.=$_POST['email'];
+   if(trim(!empty($_POST['name']))){
+		$body.='<p><strong>Имя:</strong> '.$_POST['name'].'</p>';      
+	}
+
+   if(trim(!empty($_POST['email']))){
+		$body.='<p><strong>E-mail:</strong> '.$_POST['email'].'</p>';      
+	}
+
+	if(trim(!empty($_POST['message']))){
+		$body.='<p><strong>Сообщение:</strong> '.$_POST['message'].'</p>';      
 	}	
 	
 	/*
