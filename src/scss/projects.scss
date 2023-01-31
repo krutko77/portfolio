@@ -141,29 +141,37 @@
          @media (max-width: $mobileSmall) {
             height: 300px;
          }
-      }   
-      
-      &__img--1 {
-         background-image: url("@img/drive_moto.png");
+      }  
+		
+		&__img--1 {
+         background-image: url("@img/ludmila-valentinova.png");
       }
 
       &__img--2 {
-         background-image: url("@img/helicopter_flight.png");
+         background-image: url("@img/ToDo.png");
       }
-
+      
       &__img--3 {
-         background-image: url("@img/smoothies.png");
+         background-image: url("@img/drive_moto.png");
       }
 
       &__img--4 {
-         background-image: url("@img/archmove.png");
+         background-image: url("@img/helicopter_flight.png");
       }
 
       &__img--5 {
-         background-image: url("@img/explore_channels.png");
+         background-image: url("@img/smoothies.png");
       }
 
       &__img--6 {
+         background-image: url("@img/archmove.png");
+      }
+
+      &__img--7 {
+         background-image: url("@img/explore_channels.png");
+      }
+
+      &__img--8 {
          background-image: url("@img/bright_cards.png");
       }
 
